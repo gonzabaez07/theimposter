@@ -1,3 +1,4 @@
+let palabrascategoria = ""
 
 function iniciarJuego() {
     let sectioninicio = document.getElementById("inicio")
@@ -13,9 +14,7 @@ function configurarjuego() {
     let sectionpreparacionJuego = document.getElementById("preparacion-juego")
     sectionpreparacionJuego.style.display = "block"
     sectioninicio.style.display = "none"
-    seleccionarcantjugadores()
-    seleccionarcantimpostores()
-    seleccionarcategoria()  
+ 
 }
 
 
@@ -29,28 +28,22 @@ function configurarjuego() {
 let cantjugadores = seleccionarcantjugadores ()
 function seleccionarcantjugadores (){
     let cantjugadores = document.getElementById("input-jugadores")
+    if (cantjugadores < 3 || cantjugadores > 20){
+        alert("El numero de jugadores debe ser entre 3 y 20")    
+    } 
     return cantjugadores
-        if (cantjugadores < 3 || cantjugadores > 20) {
-            alert("Cantidad de jugadores no valida")
-            seleccionarcantjugadores()  
-}
 }
 //cantidad de impostores
 let cantidadimpostores = seleccionarcantimpostores ()
 function seleccionarcantimpostores (){
     let cantidadimpostores = document.getElementById("input-impostores")
-    return cantidadimpostores
-
-
-    if (cantidadimpostores < 1 || cantidadimpostores > (cantjugadores -2)) {
-        alert("Cantidad de impostores no valida")
-        seleccionarcantimpostores()
+    if (cantidadimpostores < 1 || cantidadimpostores > cantjugadores - 2){
+        alert("El numero de impostores debe ser al menos 1 y como maximo " + (cantjugadores -2))
     }
+    return cantidadimpostores
 }
 
-
 //seleccion de categoria
-
 
 function seleccionarcategoria (){
     let inputPaises = document.getElementById("Paises")
