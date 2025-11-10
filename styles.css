@@ -14,7 +14,8 @@ body {
   background-color: #2e0606;
   text-align: center;
   padding: 10px;
-  font-size: 32px;
+  font-size: 85px;
+  margin: 10px;
   border-radius: 10px;
 }
 
@@ -22,13 +23,14 @@ body {
   color: white;
   background-color: #2e0606;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   border-radius: 10px;
+  font-size: 40px;
   padding: 10px;
 }
 
 .logo-fijo {
-    width: 300px;
+    width: 350px;
     height: auto;
     border-radius: 15px;
     display: block;
@@ -36,19 +38,65 @@ body {
 }
 
 .comenzar {
-    width: 500px;
+    width: 400px;
     height: 50px;
     border-radius: 20px;
     background-color: #4e0b0b;
     color: white;
     margin: 50px;
     border: 2px, solid;
+    font-family: "Metal Mania", system-ui;
+    font-size: large;
+}
+
+.comenzar:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .jugadores {
     display: block;
-    font-size: 16px;
+    font-size: 25px;
     margin-bottom: 8px;
     font-weight: 500;
     color: #ffcccc;
+}
+
+input [type="radio"] {
+    display: none;
+}
+
+input[type="number"] {
+    background-color: #2e0606;
+    font-family: "Metal Mania", system-ui;
+    font-size: large;
+    color: #ffcccc;
+    width: 180px;
+}
+
+.impostores {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #ffcccc;
+}
+
+#input-categorias {
+    background-color: #2e0606da;
+    color: white;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px, solid;
+    font-family: "Metal Mania", system-ui;
 }
