@@ -1,0 +1,16 @@
+body {
+  background-color: #2A0505;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Metal Mania", system-ui;
+}
+
+.logo-fijo {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 30px;
+}
