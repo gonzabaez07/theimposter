@@ -1,49 +1,67 @@
-//funciones basicas
+
+
+ //funciones basicas
 function aleatorio(min, max) {
         return Math.floor( Math.random() * (max - min + 1)+ min )
 }
 
+function iniciarJuego() {
+    sectionjuego.style.display = "none"
+    sectionpreparacionJuego.style.display = "none"
+    let botonComenzar = document.getElementById("boton-comenzar")
+    botonComenzar.addEventListener("click", seleccionarCategoria)
+    sectionpreparacionJuego.style.display = "block"
+    sectioninicio.style.display = "none"
+}
+
+
 
 //configuracion del juego
 
+
 //cantidad de jugadores
+
 
 let cantjugadores = seleccionarcantjugadores ()
 function seleccionarcantjugadores (){
-    let cantjugadores = input-jugadores.value
+    let cantjugadores = document.getElementById("input-jugadores")
     return cantjugadores
-} if (cantjugadores < 3 || cantjugadores > 20) {
-        alert("Cantidad de jugadores no valida")
-        seleccionarcantjugadores() 
+        if (cantjugadores < 3 || cantjugadores > 20) {
+            alert("Cantidad de jugadores no valida")
+            seleccionarcantjugadores()  
 }
-
+}
 //cantidad de impostores
 let cantidadimpostores = seleccionarcantimpostores ()
 function seleccionarcantimpostores (){
-    let cantidadimpostores = input-impostores.value
+    let cantidadimpostores = document.getElementById("input-impostores")
     return cantidadimpostores
-}
+
+
     if (cantidadimpostores < 1 || cantidadimpostores > (cantjugadores -2)) {
         alert("Cantidad de impostores no valida")
-        seleccionarcantimpostores() 
+        seleccionarcantimpostores()
     }
+}
 
 
 //seleccion de categoria
 
+
 function seleccionarcategoria (){
     let inputPaises = document.getElementById("Paises")
     let inputfutbolhistorico = document.getElementById("FutbolHistorico")
-    let inputfutbolactual = document.getElementById("FutbolActual") 
+    let inputfutbolactual = document.getElementById("FutbolActual")
     let inputprofesiones = document.getElementById("Profesiones")
     let inputlugares = document.getElementById("Lugares")
-    let inputsuperheroes = document.getElementById("Superheroes") 
+    let inputsuperheroes = document.getElementById("Superheroes")
     let categoria = document.getElementById("categoria-seleccionada")
 
+
     if (inputPaises.checked) {
-        categoria.innerHTML = "Paises" 
+        categoria.innerHTML = "Paises"
         let palabrascategoria = 70
-    } else if (inputfutbolhistorico.checked) { 
+    } else if (inputfutbolhistorico.checked) {
         categoria.innerHTML = "Futbol Historico"
         let palabrascategoria = 30
     }   else if (inputfutbolactual.checked) {
@@ -61,16 +79,24 @@ function seleccionarcategoria (){
     }
 }
 
+
 //juego
+
 
 function seleccionarpalabra() {
     let palabra = aleatorio(1,palabrascategoria)
 
+
 }
+
 
 function seleccionarimpostor() {
         let jugadorimpostor = aleatorio(1,cantjugadores)
         let impostor = document.getElementById("impostor")
         return impostor.innerHTML = "El impostor es el jugador " + jugadorimpostor
 
+
 }
+
+
+window.addEventListener("load", seleccionarcantjugadores)
