@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title> The Imposter</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body> 
+        <section id="inicio">
+        <h1>The Imposter</h1>
+        <h2>Bienvenidos</h2>
+<!-- logo -->
+    
+ <button class="comenzar" id="boton-comenzar">Comenzar</button>
+        </section>
+
+    <section id="preparacion-juego" >
+
+    <!-- seleccionar jugadores -->
+<div class="jugadores" id="jugadores">
+    <input type="number" id="input-jugadores" min="3" max="20" placeholder="Número de jugadores"/>
+</div>
+
+        <!-- seleccionar impostores -->
+<div class="impostores" id="impostores">
+    <input type="number" id="input-impostores" min="1" max= cantjugadores - 2
+    placeholder="Número de impostores"/>
+</div>
+
+        <!-- categorias -->
+<div class="categorias" id="categorias">
+    <input type="radio" id="input-categorias" name="categoria" />
+    <label for="Paises">Paises</label>
+
+    <input type="radio" id="input-categorias2" name="categoria" />
+    <label for="Futbol-historico">Futbolistas Históricos</label>
+
+    <input type="radio" id="input-categorias3" name="categoria" />
+    <label for="Futbol-actual">Futbolistas Actuales</label>
+
+    <input type="radio" id="input-categorias4" name="categoria" />
+    <label for="Clubes">Clubes</label>
+
+    <input type="radio" id="input-categorias5" name="categoria" />
+    <label for="Lugares">Lugares</label>
+
+    <input type="radio" id="input-categorias6" name="categoria" />
+    <label for="Profesiones">Profesiones</label>
+
+</div>
+
+        <!-- inicio del juego -->
+<div class="inicio-juego" id="inicio-juego">
+    <button class="boton-iniciar" id="boton-iniciar">Iniciar Juego</button>
+</div>
+
+    </section>
+    <section id="juego">
+
+        <!-- tarjetas a cada jugador -->
+<div class="tarjetas-jugadores" id="tarjetas-jugadores">
+</div>
+    </section>
+    </body>
+</html>
