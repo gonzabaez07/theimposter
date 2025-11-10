@@ -30,7 +30,7 @@ body {
     height: auto;
     border-radius: 15px;
     display: block;
-    margin: 30px;
+     margin: 20px auto;
 }
 
 .comenzar {
@@ -41,5 +41,4 @@ body {
     color: white;
     margin: 50px;
     border: 2px, solid;
-}
 }
