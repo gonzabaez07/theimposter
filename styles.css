@@ -82,7 +82,7 @@ input[type="number"] {
     color: #ffcccc;
 }
 
-#input-categorias {
+.categorias {
     background-color: #2e0606da;
     color: white;
     width: 200px;
