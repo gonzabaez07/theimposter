@@ -10,7 +10,7 @@ function aleatorio(min, max) {
 
 let cantjugadores = seleccionarcantjugadores ()
 function seleccionarcantjugadores (){
-    let cantjugadores = prompt("¿Cuántos jugadores van a jugar? (minimo 3, maximo 20)")
+    let cantjugadores = input-jugadores.value
     return cantjugadores
 } if (cantjugadores < 3 || cantjugadores > 20) {
         alert("Cantidad de jugadores no valida")
@@ -20,7 +20,7 @@ function seleccionarcantjugadores (){
 //cantidad de impostores
 let cantidadimpostores = seleccionarcantimpostores ()
 function seleccionarcantimpostores (){
-    let cantidadimpostores = prompt("¿Cuántos impostores habrá? (minimo 1, maximo " + (cantjugadores -2) + ")")
+    let cantidadimpostores = input-impostores.value
     return cantidadimpostores
 }
     if (cantidadimpostores < 1 || cantidadimpostores > (cantjugadores -2)) {
@@ -42,14 +42,31 @@ function seleccionarcategoria (){
 
     if (inputPaises.checked) {
         categoria.innerHTML = "Paises" 
+        let palabrascategoria = 70
     } else if (inputfutbolhistorico.checked) { 
         categoria.innerHTML = "Futbol Historico"
+        let palabrascategoria = 30
     }   else if (inputfutbolactual.checked) {
         categoria.innerHTML = "Futbol Actual"
+        let palabrascategoria = 50
+    }   else if (inputprofesiones.checked) {
+        categoria.innerHTML = "Profesiones"
+        let palabrascategoria = 50
+    }   else if (inputlugares.checked) {
+        categoria.innerHTML = "Lugares"
+        let palabrascategoria = 40
+    }   else if (inputsuperheroes.checked) {
+        categoria.innerHTML = "Superheroes"
+        let palabrascategoria = 40
     }
 }
 
 //juego
+
+function seleccionarpalabra() {
+    let palabra = aleatorio(1,palabrascategoria)
+
+}
 
 function seleccionarimpostor() {
         let jugadorimpostor = aleatorio(1,cantjugadores)
