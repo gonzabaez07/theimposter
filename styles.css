@@ -44,3 +44,11 @@ body {
     margin: 50px;
     border: 2px, solid;
 }
+
+.jugadores {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #ffcccc;
+}
