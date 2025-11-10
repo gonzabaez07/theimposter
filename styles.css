@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+
 body {
-  background-color: #2A0505;
+  background-color: #2e0606;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -7,10 +9,38 @@ body {
   font-family: "Metal Mania", system-ui;
 }
 
+.titulo {
+  color: white;
+  background-color: #2e0606;
+  text-align: center;
+  padding: 10px;
+  font-size: 32px;
+  border-radius: 10px;
+}
+
+.subtitulo {
+  color: white;
+  background-color: #2e0606;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .logo-fijo {
     width: 300px;
     height: auto;
     border-radius: 15px;
     display: block;
-    margin: 30px;
+     margin: 20px auto;
+}
+
+.comenzar {
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #4e0b0b;
+    color: white;
+    margin: 50px;
+    border: 2px, solid;
 }
