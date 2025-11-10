@@ -1,17 +1,21 @@
 
-
- //funciones basicas
-function aleatorio(min, max) {
-        return Math.floor( Math.random() * (max - min + 1)+ min )
-}
-
 function iniciarJuego() {
+    let sectioninicio = document.getElementById("inicio")
+    let sectionpreparacionJuego = document.getElementById("preparacion-juego")
+    let sectionjuego = document.getElementById("juego")
     sectionjuego.style.display = "none"
     sectionpreparacionJuego.style.display = "none"
     let botonComenzar = document.getElementById("boton-comenzar")
-    botonComenzar.addEventListener("click", seleccionarCategoria)
+    botonComenzar.addEventListener("click", configurarjuego)
+}
+function configurarjuego() {
+    let sectioninicio = document.getElementById("inicio")
+    let sectionpreparacionJuego = document.getElementById("preparacion-juego")
     sectionpreparacionJuego.style.display = "block"
     sectioninicio.style.display = "none"
+    seleccionarcantjugadores()
+    seleccionarcantimpostores()
+    seleccionarcategoria()  
 }
 
 
@@ -97,6 +101,10 @@ function seleccionarimpostor() {
 
 
 }
+ //funciones basicas
 
+function aleatorio(min, max) {
+        return Math.floor( Math.random() * (max - min + 1)+ min )
+}
 
-window.addEventListener("load", seleccionarcantjugadores)
+window.addEventListener("load", iniciarJuego)
