@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+
 body {
   background-color: #2e0606;
   background-size: cover;
@@ -41,5 +43,4 @@ body {
     color: white;
     margin: 50px;
     border: 2px, solid;
-}
 }
