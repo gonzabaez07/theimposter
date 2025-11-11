@@ -51,23 +51,21 @@ function seleccionarcantjugadores (){
 function seleccionarcantimpostores (cantjugadores){
     let cantidadimpostores = document.getElementById("input-impostores")
     if (cantidadimpostores < 1 || cantidadimpostores > cantjugadores - 2){
-        alert("El numero de impostores debe ser al menos 1 y como maximo " + (cantjugadores -2))
+        alert("El numero de impostores debe ser al menos 1 y como maximo " + cantjugadores - 2)
     }
     return cantidadimpostores
 }
 
 //seleccion de categoria
 
-function seleccionarcategoria (){
-    let inputPaises = document.getElementById("input-categorias")
-    let inputfutbolhistorico = document.getElementById("input-categorias2")
-    let inputfutbolactual = document.getElementById("input-categorias3")
-    let inputprofesiones = document.getElementById("input-categorias4")
-    let inputlugares = document.getElementById("input-categorias")
-    let inputsuperheroes = document.getElementById("input-categorias")
+function seleccionarcategoria () {
+    let inputPaises = document.getElementById("Paises")
+    let inputfutbolhistorico = document.getElementById("FutbolHistorico")
+    let inputfutbolactual = document.getElementById("FutbolActual")
+    let inputprofesiones = document.getElementById("Profesiones")
+    let inputlugares = document.getElementById("Lugares")
+    let inputsuperheroes = document.getElementById("Superheroes")
     let categoria = document.getElementById("categoria-seleccionada")
-
-
     if (inputPaises.checked){
         categoria.innerHTML = "Paises"
         palabrascategoria = 50
@@ -88,8 +86,6 @@ function seleccionarcategoria (){
         palabrascategoria = 50
     }
 }
-
-
 //juego
 
 
