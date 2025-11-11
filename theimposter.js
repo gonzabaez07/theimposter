@@ -98,7 +98,7 @@ function seleccionarpalabra() {
 }
 
 function seleccionarimpostor() {
-    let jugadorimpostor = aleatorio(1, cantjugadoresGlobal); // ✅ ahora funciona
+    let jugadorimpostor = aleatorio(1, cantjugadores); // ✅ ahora funciona
     let impostor = document.getElementById("impostor");
     return impostor.innerHTML = "El impostor es el jugador " + jugadorimpostor;
 }
