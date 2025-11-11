@@ -52,44 +52,43 @@ function seleccionarcantimpostores(cantjugadores) {
     return cantidadimpostores;
 }
 
-function seleccionarcategoria() {
+let seleccionarcategoria = () => {
     let inputPaises = document.getElementById("Paises");
     let inputFutbolistasHistoricos = document.getElementById("Futbolistashistoricos");
     let inputFutbolistasActuales = document.getElementById("Futbolistasactuales");
     let inputProfesiones = document.getElementById("Profesiones");
     let inputLugares = document.getElementById("Lugares");
     let inputClubes = document.getElementById("Clubes");
-    let spanCategoriaElegida = document.getElementById("categoria-seleccionada");
+    let spancategorias = document.getElementById("categorias");
 
     if (inputPaises.checked) {
-        spanCategoriaElegida.innerHTML = "Paises";
-        palabrascategoria = 50;
+        spancategorias.innerHTML = "Paises";
+        palabrascategorias = 50;
         return "Paises";
     } else if (inputFutbolistasHistoricos.checked) {
-        spanCategoriaElegida.innerHTML = "Futbolistas_Historicos";
-        palabrascategoria = 50;
-        return "Futbolistas_Historicos";
+        spancategorias.innerHTML = "Futbolistas Historicos";
+        palabrascategorias = 50;
+        return "Futbolistas Historicos";
     } else if (inputFutbolistasActuales.checked) {
-        spanCategoriaElegida.innerHTML = "Futbolistas_Actuales";
-        palabrascategoria = 50;
-        return "Futbolistas_Actuales";
-    } else if (inputClubes.checked) {
-        spanCategoriaElegida.innerHTML = "Clubes";
-        palabrascategoria = 50;
-        return "Clubes";
-    } else if (inputLugares.checked) {
-        spanCategoriaElegida.innerHTML = "Lugares";
-        palabrascategoria = 50;
-        return "Lugares";
+        spancategorias.innerHTML = "Futbolistas Actuales";
+        palabrascategorias = 50;
+        return "Futbolistas Actuales";
     } else if (inputProfesiones.checked) {
-        spanCategoriaElegida.innerHTML = "Profesiones";
-        palabrascategoria = 50;
+        spancategorias.innerHTML = "Profesiones";
+        palabrascategorias = 50;
         return "Profesiones";
+    } else if (inputLugares.checked) {
+        spancategorias.innerHTML = "Lugares";
+        palabrascategorias = 50;
+        return "Lugares";
+    } else if (inputClubes.checked) {
+        spancategorias.innerHTML = "Clubes";
+        palabrascategorias = 50;
+        return "Clubes";
+    } else {
+        alert("Selecciona una categoria para continuar");
     }
-
-    return "Ninguna";
 }
-
 //juego
 
 function seleccionarpalabra() {
@@ -98,7 +97,7 @@ function seleccionarpalabra() {
 }
 
 function seleccionarimpostor() {
-    let jugadorimpostor = aleatorio(1, cantjugadoresGlobal); // ✅ ahora funciona
+    let jugadorimpostor = aleatorio(1, cantjugadores); // ✅ ahora funciona
     let impostor = document.getElementById("impostor");
     return impostor.innerHTML = "El impostor es el jugador " + jugadorimpostor;
 }
