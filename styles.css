@@ -10,7 +10,7 @@ body {
 }
 
 .titulo {
-  color: white;
+  color: #ffcccc;
   background-color: #2e0606;
   text-align: center;
   padding: 10px;
@@ -20,7 +20,7 @@ body {
 }
 
 .subtitulo {
-  color: white;
+  color: #ffcccc;
   background-color: #2e0606;
   text-align: center;
   margin-top: 10px;
@@ -42,7 +42,7 @@ body {
     height: 50px;
     border-radius: 20px;
     background-color: #4e0b0b;
-    color: white;
+    color: #ffcccc;
     margin: 50px;
     border: 2px, solid;
     font-family: "Metal Mania", system-ui;
@@ -95,7 +95,7 @@ input[type="number"] {
 
 .categorias {
     background-color: #680d0d81;
-    color: white;
+    color: #ffcccc;
     width: 300px;
     height: 310px;
     display: flex;
@@ -130,7 +130,7 @@ input[type="number"] {
   height: 50px;
   border-radius: 20px;
   background-color: #4e0b0b;
-  color: white;
+  color: #ffcccc;
   margin: 50px auto;
   border: 2px, solid;
   font-family: "Metal Mania", system-ui;
@@ -146,7 +146,8 @@ input[type="number"] {
 }
 
 input:checked + label {
-  background-color: rgba(53, 12, 12, 0.85);
+  background-color: #2e0606;;
+  color: #ffcccc;
 }
 
 .asignar-rol {
@@ -154,7 +155,7 @@ input:checked + label {
   height: 50px;
   border-radius: 20px;
   background-color: #4e0b0b;
-  color: white;
+  color: #ffcccc;
   margin: 50px auto;
   border: 2px, solid;
   font-family: "Metal Mania", system-ui;
@@ -173,4 +174,34 @@ video {
   display: block;
   width: 600px;
   height: auto;
+}
+
+.titulo-final {
+  color: #ffcccc;
+  background-color: #2e0606;
+  text-align: center;
+  padding: 10px;
+  font-size: 60px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.descubrir-impostor {
+  width: 470px;
+  height: 80px;
+  border-radius: 20px;
+  background-color: #4e0b0b;
+  color: #ffcccc;
+  margin: 50px auto;
+  border: 2px, solid;
+  font-family: "Metal Mania", system-ui;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.descubrir-impostor:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
