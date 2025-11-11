@@ -1,50 +1,51 @@
-Lionel-Messi
-Cristiano-Ronaldo
-Kylian-Mbappe
-Erling-Haaland
-Neymar-Jr
-Kevin-De-Bruyne
-Mohamed-Salah
-Harry-Kane
-Vinícius-Jr
-Jude-Bellingham
-Rodri
-Antoine-Griezmann
-Pedri
-Gavi
-Robert-Lewandowski
-Karim-Benzema
-Luka-Modric
-Toni-Kroos
-Marc-Andre-ter-Stegen
-Thibaut-Courtois
-Jan-Oblak
-Virgil-van-Dijk
-Trent-Alexander-Arnold
-Andrew-Robertson
-Bukayo-Saka
-Phil-Foden
-Bruno-Fernandes
-Marcus-Rashford
-Joao-Felix
-Rafael-Leao
-Son-Heung-min
-Federico-Valverde
-Lautaro-Martinez
-Enzo-Fernandez
-Julian-Alvarez
-Angel-Di-Maria
-Paulo-Dybala
-Riyad-Mahrez
-Achraf-Hakimi
-Jadon-Sancho
-Alphonso-Davies
-Sergio-Ramos
-Gerard-Pique
-Raphael-Varane
-Ruben-Dias
-Joshua-Kimmich
-Ilkay-Gundogan
-Ousmane-Dembele
-Declan-Rice
-Bernardo-Silva
+const futbolA = [
+'Lionel Messi',
+'Cristiano Ronaldo',
+'Neymar',
+'Kylian Mbappe',
+'Erling Haaland',
+'Kevin De Bruyne',
+'Robert Lewandowski',
+'Luka Modric',
+'Karim Benzema',
+'Vinicius Junior',
+'Rodri',
+'Pedri',
+'Gavi',
+'Jude Bellingham',
+'Phil Foden',
+'Mohamed Salah',
+'Sadio Mane',
+'Harry Kane',
+'Marcus Rashford',
+'Bruno Fernandes',
+'Antoine Griezmann',
+'Ousmane Dembele',
+'Joao Felix',
+'Lautaro Martinez',
+'Julian Alvarez',
+'Angel Di Maria',
+'Rodrigo De Paul',
+'Emiliano Martinez',
+'Federico Valverde',
+'Darwin Nunez',
+'Luis Diaz',
+'Rafael Leao',
+'Son Heung-min',
+'Hakim Ziyech',
+'Achraf Hakimi',
+'Riyad Mahrez',
+'Christian Pulisic',
+'Alphonso Davies',
+'Joshua Kimmich',
+'Antonio Rudiger',
+'Virgil Van Dijk',
+'Trent Alexander-Arnold',
+'Andrew Robertson',
+'Pau Torres',
+'Pedrinho',
+'Paulo Dybala',
+'Enzo Fernandez',
+'Alejandro Garnacho',
+'Rodrygo'
+]
