@@ -10,7 +10,8 @@ function iniciarJuego() {
     let sectionjuego = document.getElementById("juego");
     sectionjuego.style.display = "none";
     sectionpreparacionJuego.style.display = "none";
-
+    let sectionfinalJuego = document.getElementById("final-juego");
+    sectionfinalJuego.style.display = "none";
 
     let botonComenzar = document.getElementById("boton-comenzar");
     botonComenzar.addEventListener("click", configurarjuego);
