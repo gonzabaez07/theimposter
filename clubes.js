@@ -1,4 +1,4 @@
-export const clubes = [
+ const clubes = [
 'Barcelona',
 'Real Madrid',
 'Atletico Madrid',

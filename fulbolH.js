@@ -1,4 +1,4 @@
-export const futbolH = [
+ const futbolH = [
     'Diego Maradona',
     'Pele',
     'Johan Cruyff',

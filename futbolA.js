@@ -1,4 +1,4 @@
-export const futbolA = [
+const futbolA = [
 'Lionel Messi',
 'Cristiano Ronaldo',
 'Neymar',

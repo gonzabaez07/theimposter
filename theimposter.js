@@ -1,10 +1,3 @@
-import { futbolH } from './fulbolH.js';
-import { profesiones } from './profesiones.js';
-import { paises } from './paises.js';
-import { futbolA } from './futbolA.js';
-import { clubes } from './clubes.js';
-import { lugares } from './lugares.js';
-
 let opcionesCategorias = [];
 let palabrascategoria = "";
 

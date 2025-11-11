@@ -1,4 +1,4 @@
-export const lugares = [
+ const lugares = [
 'Luna',
 'Marte',
 'Playa',

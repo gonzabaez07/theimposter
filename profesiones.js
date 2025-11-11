@@ -1,4 +1,4 @@
-export const profesiones = [
+ const profesiones = [
 'Medico',
 'Enfermero',
 'Bombero',
