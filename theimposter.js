@@ -45,7 +45,7 @@ function seleccionarcantimpostores (){
 
 //seleccion de categoria
 
-function seleccionarcategoria (){
+function seleccionarcategoria () {
     let inputPaises = document.getElementById("Paises")
     let inputfutbolhistorico = document.getElementById("FutbolHistorico")
     let inputfutbolactual = document.getElementById("FutbolActual")
@@ -53,28 +53,27 @@ function seleccionarcategoria (){
     let inputlugares = document.getElementById("Lugares")
     let inputsuperheroes = document.getElementById("Superheroes")
     let categoria = document.getElementById("categoria-seleccionada")
-
+}
 
     if (inputPaises.checked) {
         categoria.innerHTML = "Paises"
         let palabrascategoria = 70
     } else if (inputfutbolhistorico.checked) {
-        categoria.innerHTML = "Futbol Historico"
+        categoria.innerHTML = "Futbolistas históricos"
         let palabrascategoria = 30
     }   else if (inputfutbolactual.checked) {
-        categoria.innerHTML = "Futbol Actual"
+        categoria.innerHTML = "Futbolistas actuales"
         let palabrascategoria = 50
+    } else if (inputclubes.checked) {
+        categoria.innerHTML = "Clubes"
+        let palabrascategoria = 40
     }   else if (inputprofesiones.checked) {
         categoria.innerHTML = "Profesiones"
         let palabrascategoria = 50
     }   else if (inputlugares.checked) {
         categoria.innerHTML = "Lugares"
         let palabrascategoria = 40
-    }   else if (inputsuperheroes.checked) {
-        categoria.innerHTML = "Superheroes"
-        let palabrascategoria = 40
-    }
-}
+    }   
 
 
 //juego
