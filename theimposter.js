@@ -1,5 +1,14 @@
+import { futbolH } from './fulbolH.js';
+import { profesiones } from './profesiones.js';
+import { paises } from './paises.js';
+import { futbolA } from './futbolA.js';
+import { clubes } from './clubes.js';
+import { lugares } from './lugares.js';
+
+let opcionesCategorias = [];
 let palabrascategoria = "";
-let cantjugadoresGlobal = 0; // ✅ Variable global para usar luego
+
+let cantjugadoresGlobal = 0;
 let categoriaelegida = "";
 
 function iniciarJuego() {
@@ -71,17 +80,17 @@ let seleccionarcategoria = () => {
     let inputProfesiones = document.getElementById("Profesiones");
 
     if (inputPaises.checked) 
-        { categoriaelegida = "Paises"; palabrascategoria = 70;
+        { categoriaelegida = "Paises"; palabrascategoria = paises.length; opcionesCategorias = paises;
     } else if (inputFutbolistashistoricos.checked) 
-        { categoriaelegida = "Futbolistashistoricos"; palabrascategoria = 50;
+        { categoriaelegida = "Futbolistashistoricos"; palabrascategoria = futbolH.length; opcionesCategorias = futbolH;
     } else if (inputFutbolistasactuales.checked) 
-        { categoriaelegida = "Futbolistasactuales"; palabrascategoria = 50;
+        { categoriaelegida = "Futbolistasactuales"; palabrascategoria = futbolA.length; opcionesCategorias = futbolA;
     } else if (inputClubes.checked) 
-        { categoriaelegida = "Clubes"; palabrascategoria = 50;
+        { categoriaelegida = "Clubes"; palabrascategoria = clubes.length; opcionesCategorias = clubes;
     } else if (inputLugares.checked) 
-        { categoriaelegida = "Lugares"; palabrascategoria = 50;
+        { categoriaelegida = "Lugares"; palabrascategoria = lugares.length; opcionesCategorias = lugares;
     } else if (inputProfesiones.checked) 
-        { categoriaelegida = "Profesiones"; palabrascategoria = 50;
+        { categoriaelegida = "Profesiones"; palabrascategoria = profesiones.length; opcionesCategorias = profesiones;
     } else {
         alert("Selecciona una categoria");
     }
@@ -91,11 +100,10 @@ let seleccionarcategoria = () => {
 //juego
     
 function juego() {
-    
 
     function seleccionarpalabra() {
         let palabra = aleatorio(1, palabrascategoria);
-        return palabra;
+        return opcionesCategorias[palabra - 1];
     }
     function seleccionarimpostores() {
     let cantidadimpostores = parseInt(document.getElementById("input-impostores").value);
@@ -108,7 +116,7 @@ function juego() {
         }
     }
 
-    return impostores; // devuelve lista
+    return impostores;
 }
 
     let botonAsignarRol = document.getElementById("asignar-rol");

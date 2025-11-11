@@ -1,50 +1,52 @@
-BocaJuniors
-RiverPlate
-RacingClub
-Independiente
-SanLorenzo
-VélezSarsfield
-Flamengo
-Palmeiras
-Santos
-Corinthians
-Peñarol
-Nacional
-Colo-Colo
-UniversidaddeChile
-CruzAzul
-América 
-ChivasGuadalajara
-LAGalaxy
-NewYorkCityFC
-AtlantaUnited
-RealMadrid
-FCBarcelona
-AtléticodeMadrid
-Sevilla
-Valencia
-ManchesterUnited
-ManchesterCity
-Liverpool
-Chelsea
-Arsenal
-TottenhamHotspur
-BayernMunich
-BorussiaDortmund
-RBLeipzig
-Juventus
-ACMilan
-InterdeMilán
-ASRoma
-Napoli
-ParisSaint-Germain
-OlympiquedeMarsella
-OlympiquedeLyon
-Ajax
-PSVEindhoven
-Feyenoord
-Porto
-Benfica
-SportingCP
-Celtic
-Rangers
+export const clubes = [
+'Barcelona',
+'Real Madrid',
+'Atletico Madrid',
+'Sevilla',
+'Valencia',
+'Manchester United',
+'Manchester City',
+'Liverpool',
+'Chelsea',
+'Arsenal',
+'Tottenham',
+'Bayern Munich',
+'Borussia Dortmund',
+'RB Leipzig',
+'PSG',
+'Olympique de Marseille',
+'Olympique Lyon',
+'Juventus',
+'Inter',
+'Milan',
+'Napoli',
+'Roma',
+'Benfica',
+'Porto',
+'Sporting Lisboa',
+'Ajax',
+'PSV Eindhoven',
+'Feyenoord',
+'Boca Juniors',
+'River Plate',
+'Racing Club',
+'Independiente',
+'San Lorenzo',
+'Newell s',
+'Rosario Central',
+'Santos',
+'Sao Paulo',
+'Flamengo',
+'Palmeiras',
+'Corinthians',
+'Gremio',
+'Liga de Quito',
+'Colo Colo',
+'Universidad de Chile',
+'Peñarol',
+'Nacional',
+'LA Galaxy',
+'New York City FC',
+'Tigres',
+'America de Mexico'
+]
