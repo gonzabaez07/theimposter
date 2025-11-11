@@ -66,22 +66,22 @@ function seleccionarcategoria () {
     let inputLugares = document.getElementById("Lugares")
     let inputClubes = document.getElementById("Clubes")
     let categoria = document.getElementById("categoria-seleccionada")
-    if (inputPaises.checked){
+    if (inputPaises.checked) {
         categoria.innerHTML = "Paises"
         palabrascategoria = 50
-    } else if (inputFutbolistasHistoricos.checked){
+    } else if (inputfutbolhistorico.checked) {
         categoria.innerHTML = "Futbol Historico"
         palabrascategoria = 50
-    } else if (inputFutbolistasActuales.checked){
+    } else if (inputfutbolactual.checked) {
         categoria.innerHTML = "Futbol Actual"
         palabrascategoria = 50
-    }  else if (inputClubes.checked){  
-        categoria.innerHTML = "Clubes"
+    }  else if (inputclubes.checked) {  
+        categoria.innerHTML = "clubes"
         palabrascategoria = 50
-    }  else if (inputLugares.checked){
+    }  else if (inputlugares.checked) {
         categoria.innerHTML = "Lugares"
         palabrascategoria = 50
-    } else if (inputProfesiones.checked){
+    } else if (inputprofesiones.checked) {
         categoria.innerHTML = "Profesiones"
         palabrascategoria = 50
     }
