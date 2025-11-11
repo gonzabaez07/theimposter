@@ -63,7 +63,7 @@ body {
     text-align: center;
 }
 
-input [type="radio"] {
+input[type="radio"] {
     display: none;
 }
 
@@ -125,19 +125,26 @@ input[type="number"] {
   margin-bottom: 10px;
 }
 
-.inicio-juego {
+.boton-iniciar {
   width: 400px;
   height: 50px;
   border-radius: 20px;
   background-color: #4e0b0b;
   color: white;
-  margin: 50px;
+  margin: 50px auto;
   border: 2px, solid;
   font-family: "Metal Mania", system-ui;
   font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.inicio-juego:hover {
+.boton-iniciar:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+
+input:checked + label {
+  background-color: rgba(53, 12, 12, 0.85);
 }
