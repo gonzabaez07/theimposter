@@ -54,40 +54,28 @@ function seleccionarcantimpostores(cantjugadores) {
 
 let seleccionarcategoria = () => {
     let inputPaises = document.getElementById("Paises");
-    let inputFutbolistasHistoricos = document.getElementById("Futbolistashistoricos");
-    let inputFutbolistasActuales = document.getElementById("Futbolistasactuales");
-    let inputProfesiones = document.getElementById("Profesiones");
-    let inputLugares = document.getElementById("Lugares");
+    let inputFutbolistashistoricos = document.getElementById("Futbolistashistoricos");
+    let inputFutbolistasactuales = document.getElementById("Futbolistasactuales");
     let inputClubes = document.getElementById("Clubes");
-    let spancategorias = document.getElementById("categorias");
+    let inputLugares = document.getElementById("Lugares");
+    let inputProfesiones = document.getElementById("Profesiones");
 
-    if (inputPaises.checked) {
-        spancategorias.innerHTML = "Paises";
-        palabrascategorias = 50;
-        return "Paises";
-    } else if (inputFutbolistasHistoricos.checked) {
-        spancategorias.innerHTML = "Futbolistas Historicos";
-        palabrascategorias = 50;
-        return "Futbolistas Historicos";
-    } else if (inputFutbolistasActuales.checked) {
-        spancategorias.innerHTML = "Futbolistas Actuales";
-        palabrascategorias = 50;
-        return "Futbolistas Actuales";
-    } else if (inputProfesiones.checked) {
-        spancategorias.innerHTML = "Profesiones";
-        palabrascategorias = 50;
-        return "Profesiones";
-    } else if (inputLugares.checked) {
-        spancategorias.innerHTML = "Lugares";
-        palabrascategorias = 50;
-        return "Lugares";
-    } else if (inputClubes.checked) {
-        spancategorias.innerHTML = "Clubes";
-        palabrascategorias = 50;
-        return "Clubes";
+    if (inputPaises.checked) 
+        { categoriaelegida = "Paises"; palabrascategoria = 70;
+    } else if (inputFutbolistashistoricos.checked) 
+        { categoriaelegida = "Futbolistashistoricos"; palabrascategoria = 50;
+    } else if (inputFutbolistasactuales.checked) 
+        { categoriaelegida = "Futbolistasactuales"; palabrascategoria = 50;
+    } else if (inputClubes.checked) 
+        { categoriaelegida = "Clubes"; palabrascategoria = 50;
+    } else if (inputLugares.checked) 
+        { categoriaelegida = "Lugares"; palabrascategoria = 50;
+    } else if (inputProfesiones.checked) 
+        { categoriaelegida = "Profesiones"; palabrascategoria = 50;
     } else {
-        alert("Selecciona una categoria para continuar");
+        alert("Selecciona una categoria");
     }
+    return categoriaelegida;
 }
 //juego
 
