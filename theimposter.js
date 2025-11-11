@@ -53,7 +53,7 @@ function seleccionarcategoria () {
     let inputlugares = document.getElementById("Lugares")
     let inputsuperheroes = document.getElementById("Superheroes")
     let categoria = document.getElementById("categoria-seleccionada")
-}
+
 
     if (inputPaises.checked) {
         categoria.innerHTML = "Paises"
@@ -74,7 +74,7 @@ function seleccionarcategoria () {
         categoria.innerHTML = "Lugares"
         let palabrascategoria = 40
     }   
-
+}
 
 //juego
 
