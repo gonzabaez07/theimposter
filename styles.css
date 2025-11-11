@@ -60,6 +60,7 @@ body {
     margin-bottom: 8px;
     font-weight: 500;
     color: #ffcccc;
+    text-align: center;
 }
 
 input [type="radio"] {
@@ -80,6 +81,7 @@ input[type="number"] {
     margin-bottom: 8px;
     font-weight: 500;
     color: #ffcccc;
+    text-align: center;
 }
 
 .tarjetas {
@@ -92,10 +94,10 @@ input[type="number"] {
 }
 
 .categorias {
-    background-color: #2e0606da;
+    background-color: #680d0d81;
     color: white;
     width: 300px;
-    height: 250px;
+    height: 310px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,10 +112,32 @@ input[type="number"] {
     font-family: "Metal Mania", system-ui;
 }
 
+.categorias:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 .categorias img {
-  width: 200px;
-  height: 135px;
+  width: 250px;
+  height: 190px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+
+.inicio-juego {
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #4e0b0b;
+  color: white;
+  margin: 50px;
+  border: 2px, solid;
+  font-family: "Metal Mania", system-ui;
+  font-size: large;
+}
+
+.inicio-juego:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
