@@ -134,7 +134,10 @@ let impostores = seleccionarimpostores();
             alert("Jugador " + jugadoractual + ": Tu palabra es: " + palabra);
         }
         jugadoractual++;
-    }
+    } let sectionfinalJuego = document.getElementById("final-juego");
+    sectionfinalJuego.style.display = "block";
+    let sectionjuego = document.getElementById("juego");
+    sectionjuego.style.display = "none";
 }
 }
 
