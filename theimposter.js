@@ -60,28 +60,28 @@ function seleccionarcantimpostores (cantjugadores){
 
 function seleccionarcategoria () {
     let inputPaises = document.getElementById("Paises")
-    let inputfutbolhistorico = document.getElementById("FutbolHistorico")
-    let inputfutbolactual = document.getElementById("FutbolActual")
-    let inputprofesiones = document.getElementById("Profesiones")
-    let inputlugares = document.getElementById("Lugares")
-    let inputsuperheroes = document.getElementById("Superheroes")
+    let inputFutbolistasHistoricos = document.getElementById("Futbolistashistoricos")
+    let inputFutbolistasActuales = document.getElementById("Futbolistasactuales")
+    let inputProfesiones = document.getElementById("Profesiones")
+    let inputLugares = document.getElementById("Lugares")
+    let inputClubes = document.getElementById("Clubes")
     let categoria = document.getElementById("categoria-seleccionada")
     if (inputPaises.checked){
         categoria.innerHTML = "Paises"
         palabrascategoria = 50
-    } else if (inputfutbolhistorico.checked){
+    } else if (inputFutbolistasHistoricos.checked){
         categoria.innerHTML = "Futbol Historico"
         palabrascategoria = 50
-    } else if (inputfutbolactual.checked){
+    } else if (inputFutbolistasActuales.checked){
         categoria.innerHTML = "Futbol Actual"
         palabrascategoria = 50
-    }  else if (inputclubes.checked){  
-        categoria.innerHTML = "clubes"
+    }  else if (inputClubes.checked){  
+        categoria.innerHTML = "Clubes"
         palabrascategoria = 50
-    }  else if (inputlugares.checked){
+    }  else if (inputLugares.checked){
         categoria.innerHTML = "Lugares"
         palabrascategoria = 50
-    } else if (inputprofesiones.checked){
+    } else if (inputProfesiones.checked){
         categoria.innerHTML = "Profesiones"
         palabrascategoria = 50
     }
