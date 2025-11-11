@@ -1,13 +1,14 @@
 let palabrascategoria = "";
 let cantjugadoresGlobal = 0; // ✅ Variable global para usar luego
+let categoriaelegida = "";
 
 function iniciarJuego() {
     console.log("juego iniciado");
-    let sectioninicio = document.getElementById("inicio");
     let sectionpreparacionJuego = document.getElementById("preparacion-juego");
     let sectionjuego = document.getElementById("juego");
     sectionjuego.style.display = "none";
     sectionpreparacionJuego.style.display = "none";
+
 
     let botonComenzar = document.getElementById("boton-comenzar");
     botonComenzar.addEventListener("click", configurarjuego);
@@ -29,10 +30,19 @@ let iniciarJuegoPosta = () => {
     let cantjugadores = seleccionarcantjugadores();
     let cantidadimpostores = seleccionarcantimpostores(cantjugadores);
     let categoria = seleccionarcategoria();
+    
 
     console.log("Cantidad de jugadores: " + cantjugadores);
     console.log("Cantidad de impostores: " + cantidadimpostores);
     console.log("Categoria seleccionada: " + categoria);
+
+    
+
+    let sectionpreparacionJuego = document.getElementById("preparacion-juego");
+    sectionpreparacionJuego.style.display = "none";
+    let sectionjuego = document.getElementById("juego");
+    sectionjuego.style.display = "block";
+    juego(); 
 }
 
 function seleccionarcantjugadores() {
@@ -77,18 +87,50 @@ let seleccionarcategoria = () => {
     }
     return categoriaelegida;
 }
+
 //juego
+    
+function juego() {
+    
 
-function seleccionarpalabra() {
-    let palabra = aleatorio(1, palabrascategoria);
-    return palabra;
+    function seleccionarpalabra() {
+        let palabra = aleatorio(1, palabrascategoria);
+        return palabra;
+    }
+    function seleccionarimpostores() {
+    let cantidadimpostores = parseInt(document.getElementById("input-impostores").value);
+    let impostores = [];
+
+    while (impostores.length < cantidadimpostores) {
+        let candidato = aleatorio(1, cantjugadoresGlobal);
+        if (!impostores.includes(candidato)) {
+            impostores.push(candidato);
+        }
+    }
+
+    return impostores; // devuelve lista
 }
 
-function seleccionarimpostor() {
-    let jugadorimpostor = aleatorio(1, cantjugadores); // ✅ ahora funciona
-    let impostor = document.getElementById("impostor");
-    return impostor.innerHTML = "El impostor es el jugador " + jugadorimpostor;
+    let botonAsignarRol = document.getElementById("asignar-rol");
+    botonAsignarRol.addEventListener("click", rolesjugadores);
+    
+    function rolesjugadores() {
+let palabra = seleccionarpalabra();
+let impostores = seleccionarimpostores();
+
+   let jugadoractual = 1;
+    while (jugadoractual <= cantjugadoresGlobal) {
+        if (impostores.includes(jugadoractual)) {
+
+            alert("Jugador " + jugadoractual + ": Eres el impostor");
+        } else {
+            alert("Jugador " + jugadoractual + ": Tu palabra es: " + palabra);
+        }
+        jugadoractual++;
+    }
 }
+}
+
 
 //funciones basicas
 
