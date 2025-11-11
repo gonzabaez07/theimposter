@@ -1,7 +1,9 @@
 let palabrascategoria = "";
 let cantjugadoresGlobal = 0; // ✅ Variable global para usar luego
 let categoriaelegida = "";
-
+let reiniciarJuego = () => {
+    location.reload()
+}
 function iniciarJuego() {
     console.log("juego iniciado");
     let sectionpreparacionJuego = document.getElementById("preparacion-juego");
@@ -49,6 +51,7 @@ function seleccionarcantjugadores() {
     let cantjugadores = parseInt(document.getElementById("input-jugadores").value); // ✅ Parsear valor
     if (cantjugadores < 3 || cantjugadores > 20 || isNaN(cantjugadores)) {
         alert("El numero de jugadores debe ser entre 3 y 20");
+        reiniciarJuego();
     }
     cantjugadoresGlobal = cantjugadores; // ✅ Guardar global
     return cantjugadores;
@@ -58,6 +61,7 @@ function seleccionarcantimpostores(cantjugadores) {
     let cantidadimpostores = parseInt(document.getElementById("input-impostores").value); // ✅ Parsear valor
     if (cantidadimpostores < 1 || cantidadimpostores > cantjugadores - 2 || isNaN(cantidadimpostores)) {
         alert("El numero de impostores debe ser al menos 1 y como maximo " + (cantjugadores - 2));
+        reiniciarJuego();
     }
     return cantidadimpostores;
 }
@@ -84,6 +88,7 @@ let seleccionarcategoria = () => {
         { categoriaelegida = "Profesiones"; palabrascategoria = 50;
     } else {
         alert("Selecciona una categoria");
+        reiniciarJuego();
     }
     return categoriaelegida;
 }
