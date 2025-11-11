@@ -1,6 +1,7 @@
 let palabrascategoria = ""
 
 function iniciarJuego() {
+    console.log("juego iniciado")
     let sectioninicio = document.getElementById("inicio")
     let sectionpreparacionJuego = document.getElementById("preparacion-juego")
     let sectionjuego = document.getElementById("juego")
@@ -8,6 +9,9 @@ function iniciarJuego() {
     sectionpreparacionJuego.style.display = "none"
     let botonComenzar = document.getElementById("boton-comenzar")
     botonComenzar.addEventListener("click", configurarjuego)
+    let botonIniciar = document.getElementById("boton-iniciar")
+    botonIniciar.addEventListener("click", iniciarJuegoPosta)
+
 }
 function configurarjuego() {
     let sectioninicio = document.getElementById("inicio")
@@ -24,8 +28,17 @@ function configurarjuego() {
 
 //cantidad de jugadores
 
+let iniciarJuegoPosta = () => {
+    let cantjugadores = seleccionarcantjugadores ()
+    let cantidadimpostores = seleccionarcantimpostores (cantjugadores)
+    let categoria = seleccionarcategoria ()
+    console.log("Cantidad de jugadores: " + cantjugadores)
+    console.log("Cantidad de impostores: " + cantidadimpostores)
+    console.log("Categoria seleccionada: " + categoria)
+}
 
-let cantjugadores = seleccionarcantjugadores ()
+
+
 function seleccionarcantjugadores (){
     let cantjugadores = document.getElementById("input-jugadores")
     if (cantjugadores < 3 || cantjugadores > 20){
@@ -34,11 +47,11 @@ function seleccionarcantjugadores (){
     return cantjugadores
 }
 //cantidad de impostores
-let cantidadimpostores = seleccionarcantimpostores ()
-function seleccionarcantimpostores (){
+
+function seleccionarcantimpostores (cantjugadores){
     let cantidadimpostores = document.getElementById("input-impostores")
     if (cantidadimpostores < 1 || cantidadimpostores > cantjugadores - 2){
-        alert("El numero de impostores debe ser al menos 1 y como maximo " + (cantjugadores -2))
+        alert("El numero de impostores debe ser al menos 1 y como maximo " + cantjugadores - 2)
     }
     return cantidadimpostores
 }
@@ -53,29 +66,26 @@ function seleccionarcategoria () {
     let inputlugares = document.getElementById("Lugares")
     let inputsuperheroes = document.getElementById("Superheroes")
     let categoria = document.getElementById("categoria-seleccionada")
-
-
     if (inputPaises.checked) {
         categoria.innerHTML = "Paises"
-        let palabrascategoria = 70
+        palabrascategoria = 50
     } else if (inputfutbolhistorico.checked) {
-        categoria.innerHTML = "Futbolistas históricos"
-        let palabrascategoria = 30
-    }   else if (inputfutbolactual.checked) {
-        categoria.innerHTML = "Futbolistas actuales"
-        let palabrascategoria = 50
-    } else if (inputclubes.checked) {
-        categoria.innerHTML = "Clubes"
-        let palabrascategoria = 40
-    }   else if (inputprofesiones.checked) {
-        categoria.innerHTML = "Profesiones"
-        let palabrascategoria = 50
-    }   else if (inputlugares.checked) {
+        categoria.innerHTML = "Futbol Historico"
+        palabrascategoria = 50
+    } else if (inputfutbolactual.checked) {
+        categoria.innerHTML = "Futbol Actual"
+        palabrascategoria = 50
+    }  else if (inputclubes.checked) {  
+        categoria.innerHTML = "clubes"
+        palabrascategoria = 50
+    }  else if (inputlugares.checked) {
         categoria.innerHTML = "Lugares"
-        let palabrascategoria = 40
-    }   
+        palabrascategoria = 50
+    } else if (inputprofesiones.checked) {
+        categoria.innerHTML = "Profesiones"
+        palabrascategoria = 50
+    }
 }
-
 //juego
 
 
