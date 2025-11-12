@@ -1,7 +1,8 @@
  const clubes = [
 'Barcelona',
+'Ateneo',
 'Real Madrid',
-'Atletico Madrid',
+'Atlético Madrid',
 'Sevilla',
 'Valencia',
 'Manchester United',
@@ -32,7 +33,7 @@
 'Racing Club',
 'Independiente',
 'San Lorenzo',
-'Newell s',
+'Newells',
 'Rosario Central',
 'Santos',
 'Sao Paulo',
@@ -46,7 +47,7 @@
 'Peñarol',
 'Nacional',
 'LA Galaxy',
-'New York City FC',
-'Tigres',
-'America de Mexico'
+'Colón',
+'Inter de Miami',
+'Unión'
 ]
