@@ -186,6 +186,66 @@ video {
   border-radius: 10px;
 }
 
+.card {
+  width: 40vw;
+  min-width: 600px;
+  height: 70vh;
+  background-color: #4e0b0b;
+  color: #ffcccc;
+  margin: 50px auto;
+  font-family: "Metal Mania", system-ui;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  background: transparent;     /* saca cualquier color de fondo */
+  border: none;                /* elimina el borde del contenedor */
+  box-shadow: none;            /* quita sombra general */
+}
+
+.card input {
+  display: none;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  background: transparent;
+}
+
+.card-inner.rotated {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F2E9E4;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.card-front {
+  background: #2E2E2E;
+}
+
+.card-back {
+  background: #7A0C0C;
+  transform: rotateY(180deg);
+}
+
+
 .descubrir-impostor {
   width: 470px;
   height: 80px;

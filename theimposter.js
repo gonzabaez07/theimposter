@@ -127,29 +127,47 @@ function juego() {
     }
 
     return impostores;
-}
+    }
 
-    let botonAsignarRol = document.getElementById("asignar-rol");
-    botonAsignarRol.addEventListener("click", rolesjugadores);
+    // let botonAsignarRol = document.getElementById("asignar-rol");
+    // botonAsignarRol.addEventListener("click", rolesjugadores);
     
     function rolesjugadores() {
+        let mostrandorol = false
         let palabra = seleccionarpalabra();
         let impostores = seleccionarimpostores();
         let jugadoractual = 1;
-
-    while (jugadoractual <= cantjugadoresGlobal) {
-        if (impostores.includes(jugadoractual)) {
-            alert("Jugador " + jugadoractual + ": Eres el impostor");
-        } else {
-            alert("Jugador " + jugadoractual + ": Tu palabra es: " + palabra);
+        function cambiartarjeta () {
+            console.log('cambiar tarjeta')
+            mostrandorol = !mostrandorol
+            if (!mostrandorol) jugadoractual++;
+            if (jugadoractual > cantjugadoresGlobal) {
+                let sectionfinalJuego = document.getElementById("final-juego");
+                sectionfinalJuego.style.display = "block";
+                let sectionjuego = document.getElementById("juego");
+                sectionjuego.style.display = "none";
+            }
+            let rolstring = ""
+            if (mostrandorol) {
+                if (impostores.includes(jugadoractual)) {
+                    rolstring = "Eres el impostor"
+                } else {
+                    rolstring = "Tu palabra es: " + palabra
+               
+                }
+                document.getElementById("datos-jugadores-back").textContent = rolstring
+                document.getElementById("card-inner").className= 'card-inner rotated'
+            }
+            else {
+                document.getElementById("datos-jugadores-front").textContent = `Jugador ${jugadoractual}`
+                document.getElementById("card-inner").className = 'card-inner'
+            }
         }
-        jugadoractual++;
-    } 
-        let sectionfinalJuego = document.getElementById("final-juego");
-        sectionfinalJuego.style.display = "block";
-        let sectionjuego = document.getElementById("juego");
-        sectionjuego.style.display = "none";
+        document.getElementById("datos-jugadores-front").textContent = `Jugador ${jugadoractual}`
+        document.getElementById("tarjetas-jugadores").addEventListener("click", cambiartarjeta)
+
 }
+        rolesjugadores()
 }
 
 
