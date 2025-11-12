@@ -305,12 +305,14 @@ video {
 }
 
 #final-juego {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 40px;
+  padding-top: 40px;
 }
 
 .titulo-final {
@@ -333,7 +335,7 @@ video {
 }
 
 .descubrir-impostor {
-  width: 480px;
+  width: 400px;
   height: 80px;
   border-radius: 28px;
   background-color: #4e0b0b;
@@ -356,7 +358,7 @@ video {
 }
 
 .boton-final {
-  width: 260px;
+  width: 230px;
   height: 56px;
   border-radius: 26px;
   background-color: #4e0b0b;
@@ -380,7 +382,10 @@ video {
 
 .botonesfinales {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 40px;
+  width: 100%;
 }
 
 @keyframes shakeAlert {
@@ -394,4 +399,32 @@ video {
 
 .titulo-final.shake {
   animation: shakeAlert 0.4s linear;
+}
+
+@keyframes flashRed {
+  0% { background-color: rgba(255, 0, 0, 0.5); }
+  50% { background-color: rgba(255, 0, 0, 0.9); }
+  100% { background-color: rgba(255, 0, 0, 0.5); }
+}
+
+body.flash-role {
+  animation: flashRed 0.6s ease-in-out;
+}
+
+@keyframes zoomReveal {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.impostor-revelado {
+  animation: zoomReveal 0.6s ease-out;
+}
+
+.contenedor-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
 }

@@ -162,10 +162,24 @@ function juego() {
 function revelarImpostores() {
     if (impostoresGlobal.length === 0) {
         alert("Todavía no se han asignado impostores.");
-    } else {
-        alert("Los impostores son los jugadores: " + impostoresGlobal.join(", "));
+        return;
     }
+
+    const titulo = document.querySelector(".titulo-final");
+
+    titulo.classList.remove("shake");
+    void titulo.offsetWidth;
+    titulo.classList.add("shake");
+
+    let texto = "Los impostores son los jugadores: " + impostoresGlobal.join(", ");
+
+    titulo.classList.add("impostor-revelado");
+
+    setTimeout(() => {
+        titulo.textContent = texto;
+    }, 150);
 }
+
 
 // Volver a jugar
 function volverAJugar() {
