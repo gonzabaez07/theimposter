@@ -12,94 +12,109 @@
         <script src="./theimposter.js"></script>
         <link rel="stylesheet" href="./styles.css" />
     </head>
+
     <body> 
         <section id="inicio">
-        <h1 class="titulo">The Imposter</h1>
-        <h2 class="subtitulo">Bienvenidos</h2>
-        <img src="./imagenes/logofijo.jpg" alt="Logo fijo" class="logo-fijo">
-<!-- logo -->
+            <h1 class="titulo">The Imposter</h1>
+            <h2 class="subtitulo">Bienvenidos</h2>
+            <img src="./imagenes/logofijo.jpg" alt="Logo fijo" class="logo-fijo">
+            <!-- logo -->
     
- <button class="comenzar" id="boton-comenzar">Comenzar</button>
+            <button class="comenzar" id="boton-comenzar">Comenzar</button>
         </section>
 
-    <section id="preparacion-juego" >
 
-    <!-- seleccionar jugadores -->
-<div class="jugadores" id="jugadores">
-    <label for="input-jugadores">Número de jugadores</label>
-    <input type="number" id="input-jugadores" min="3" max="20" placeholder="Número de jugadores"/>
-</div>
+        <section id="preparacion-juego" >
 
-        <!-- seleccionar impostores -->
-<div class="impostores" id="impostores">
-    <label for="input-impostores">Número de impostores</label>
-    <input type="number" id="input-impostores" min="1" max="5" placeholder="Número de impostores"/>
-</div>
+            <!-- seleccionar jugadores -->
+            <div class="jugadores" id="jugadores">
+                <label for="input-jugadores">Número de jugadores</label>
+                <input type="number" id="input-jugadores" min="3" max="20" placeholder="Número de jugadores"/>
+            </div>
 
-        <!-- categorias -->
-<div class="tarjetas">
-    <input type="radio" name="categoria" id="Paises" />
-    <label for="Paises" class="categorias">
-        <img src="./imagenes/paises.jpg" alt="Paises">
-                <p>Países</p>
-            </label>
+            <!-- seleccionar impostores -->
+            <div class="impostores" id="impostores">
+                <label for="input-impostores">Número de impostores</label>
+                <input type="number" id="input-impostores" min="1" max="5" placeholder="Número de impostores"/>
+            </div>
 
-    <input type="radio" name="categoria" id="Futbolistashistoricos" />
-    <label for="Futbolistashistoricos" class="categorias">
-        <img src="./imagenes/futbolistashistoricos.jpg" alt="Futbolistashistoricos">
-                <p>Futbolistas históricos</p>
-            </label>
+            <!-- categorias -->
+            <div class="tarjetas">
+                <input type="radio" name="categoria" id="Paises" />
+                    <label for="Paises" class="categorias">
+                    <img src="./imagenes/paises.jpg" alt="Paises">
+                    <p>Países</p>
+                    </label>
 
-    <input type="radio" name="categoria" id="Futbolistasactuales" />
-    <label for="Futbolistasactuales" class="categorias">
-        <img src="./imagenes/futbolistasactuales.jpg" alt="Futbolistas actuales">
-                <p>Futbolistas actuales</p>
-            </label>
+                <input type="radio" name="categoria" id="Futbolistashistoricos" />
+                    <label for="Futbolistashistoricos" class="categorias">
+                    <img src="./imagenes/futbolistashistoricos.jpg" alt="Futbolistashistoricos">
+                    <p>Futbolistas históricos</p>
+                    </label>
 
-    <input type="radio" name="categoria" id="Clubes" />
-    <label for="Clubes" class="categorias">
-        <img src="./imagenes/clubes.jpg" alt="Clubes">
-                <p>Clubes</p>
-            </label>
+                <input type="radio" name="categoria" id="Futbolistasactuales" />
+                    <label for="Futbolistasactuales" class="categorias">
+                    <img src="./imagenes/futbolistasactuales.jpg" alt="Futbolistas actuales">
+                    <p>Futbolistas actuales</p>
+                    </label>
 
-    <input type="radio" name="categoria" id="Lugares" />
-    <label for="Lugares" class="categorias">
-        <img src="./imagenes/lugares.jpg" alt="Lugares">
-                <p>Lugares</p>
-            </label>
+                <input type="radio" name="categoria" id="Clubes" />
+                    <label for="Clubes" class="categorias">
+                    <img src="./imagenes/clubes.jpg" alt="Clubes">
+                    <p>Clubes</p>
+                    </label>
 
-    <input type="radio" name="categoria" id="Profesiones" />
-    <label for="Profesiones" class="categorias">
-        <img src="./imagenes/profesiones.jpg" alt="Profesiones">
-                <p>Profesiones</p>
-            </label>
+                <input type="radio" name="categoria" id="Lugares" />
+                    <label for="Lugares" class="categorias">
+                    <img src="./imagenes/lugares.jpg" alt="Lugares">
+                    <p>Lugares</p>
+                    </label>
 
-</div>
+                <input type="radio" name="categoria" id="Profesiones" />
+                    <label for="Profesiones" class="categorias">
+                    <img src="./imagenes/profesiones.jpg" alt="Profesiones">
+                    <p>Profesiones</p>
+                    </label>
 
-        <!-- inicio del juego -->
-<div class="inicio-juego" id="inicio-juego">
-    <button class="boton-iniciar" id="boton-iniciar">Iniciar Juego</button>
-</div>
+                <input type="radio" name="categoria" id="Clash Royale" />
+                    <label for="Clash Royale" class="categorias">
+                    <img src="./imagenes/clash-royale.jpg" alt="Clash Royale">
+                    <p>Clash Royale</p>
+                    </label>
 
-    </section>
-    <section id="juego">
-        <!--Comienzo del juego-->
-        <button id="asignar-rol" class="asignar-rol">Asignar rol</button>
+            </div>
 
-        <!-- tarjetas a cada jugador -->
-<div class="tarjetas-jugadores" id="tarjetas-jugadores">
-</div>
 
-<div>
-    <video autoplay loop muted>
-  <source src="./imagenes/videologoinfinito.mp4" type="video/mp4" class="videologoinfinito">
-    </video>
+                <!-- inicio del juego -->
+            <div class="inicio-juego" id="inicio-juego">
+                <button class="boton-iniciar" id="boton-iniciar">Iniciar Juego</button>
 
-</div>
-    </section>
+            </div>
 
-    <section id="final-juego">
-        <h1 class="titulo-final">Descubran al Impostor</h1>
-        <button id="descubrir-impostor" class="descubrir-impostor">Descubrir Impostor</button>
+        </section>
+    
+
+        <section id="juego">
+            <!--Comienzo del juego-->
+            <button id="asignar-rol" class="asignar-rol">Asignar rol</button>
+
+            <!-- tarjetas a cada jugador -->
+            <div class="tarjetas-jugadores" id="tarjetas-jugadores">
+            </div>
+
+            <div>
+                <video autoplay loop muted>
+                <source src="./imagenes/videologoinfinito.mp4" type="video/mp4" class="videologoinfinito">
+                </video>
+
+            </div>
+        </section>
+
+
+        <section id="final-juego">
+            <h1 class="titulo-final">Descubran al Impostor</h1>
+                <button id="descubrir-impostor" class="descubrir-impostor">Descubrir Impostor</button>
+    
     </body>
+
 </html>
