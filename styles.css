@@ -223,10 +223,11 @@ video {
 }
 
 .card {
-  width: min(600px, 80vw);
-  height: 70vh;
-  color: #ffcccc;
+  width: min(480px, 80vw);
+  height: min(320px, 60vh);
   margin: 0 auto;
+  perspective: 1200px;
+  margin-top: 200px;
 }
 
 .card input {
@@ -237,10 +238,16 @@ video {
   width: 100%;
   height: 100%;
   position: relative;
-  transition: transform 0.8s;
+  transition: transform 0.7s ease, box-shadow 0.7s ease;
   transform-style: preserve-3d;
   cursor: pointer;
-  background: transparent;
+  border-radius: 26px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, .8);
+  margin-top: 200px;
+}
+
+.card-inner:hover {
+  transform: translateY(-4px);
 }
 
 .card-inner.rotated {
@@ -252,24 +259,45 @@ video {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 10px;
+  border-radius: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #F2E9E4;
-  font-size: 20px;
-  border-radius: 20px;
+  color: #FFEFEF;
+  font-size: 22px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 35px rgba(255, 80, 80, 0.65);
+  border: 3px solid #ff4b4b;
+  margin-top: 200px;
 }
 
 .card-front {
-  background: #2E2E2E;
+  background: radial-gradient(circle at top, #2a1b3f 0, #05060b 55%, #000000 100%);
 }
 
 .card-back {
-  background: #7A0C0C;
+  background: radial-gradient(circle at top, #7a0c0c 0, #210202 60%, #050000 100%);
   transform: rotateY(180deg);
 }
 
+.hud-juego {
+  margin-bottom: 18px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffcccc;
+  text-shadow: 0 0 10px #ff4b4b;
+  margin: 30px;
+}
+
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+}
 
 .descubrir-impostor {
   width: 470px;
