@@ -2,6 +2,8 @@
 
 html, body {
   height: 100%;
+  background: radial-gradient(circle at top, #3b0000 0, #120000 55%, #050000 100%);
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
 }
@@ -13,20 +15,24 @@ html, body {
 body {
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: radial-gradient(circle at top, #3b0000 0, #120000 55%, #050000 100%);
   font-family: "Metal Mania", system-ui;
   color: #ffe4e1;
 }
 
 .hero {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 18px;
+  justify-content: center;
+  gap: 25px;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .titulo {
@@ -77,10 +83,19 @@ body {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-.jugadores {
-    display: block;
+#preparacion-juego {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.jugadores, .impostores {
+    display: inline-block;
     font-size: 25px;
-    margin-bottom: 8px;
+    margin: 0 15px 10px 15px;
     font-weight: 500;
     color: #ffcccc;
     text-align: center;
@@ -98,15 +113,6 @@ input[type="number"] {
     width: 180px;
 }
 
-.impostores {
-    display: block;
-    font-size: 25px;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #ffcccc;
-    text-align: center;
-}
-
 .tarjetas {
   display: flex;
   justify-content: center;
@@ -117,55 +123,68 @@ input[type="number"] {
 }
 
 .categorias {
-    background-color: #680d0d81;
-    color: #ffcccc;
     width: 300px;
-    height: 310px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    padding: 20px;
+    background: #250000;
+    border: 2px solid #ff4040;
     border-radius: 20px;
-    box-sizing: border-box;
-    transition: transform 0.3s;
-    margin-left: 20px;
-    margin-right: 20px;
-    border: 2px, solid;
-    font-family: "Metal Mania", system-ui;
+    box-shadow: 0 0 25px rgba(255, 20, 20, 0.25);
+    transition: transform .25s, box-shadow .25s, border-color .25s;
+    cursor: pointer;
 }
 
 .categorias:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+    transform: translateY(-10px) scale(1.03);
+    border-color: #ff6b6b;
+    box-shadow: 0 0 35px rgba(255, 60, 60, 0.6);
 }
 
 .categorias img {
-  width: 250px;
-  height: 190px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
+    width: 100%;
+    border-radius: 15px;
+    transition: opacity .25s;
+}
+
+.categorias:hover img {
+    opacity: 0.88;
 }
 
 .boton-iniciar {
-  width: 400px;
-  height: 50px;
-  border-radius: 20px;
-  background-color: #4e0b0b;
-  color: #ffcccc;
-  margin: 50px auto;
-  border: 2px, solid;
-  font-family: "Metal Mania", system-ui;
-  font-size: large;
+    padding: 12px 40px;
+    background: rgba(0,0,0,0.3);
+    border: 2px solid #ff4040;
+    border-radius: 30px;
+    color: #ffeaea;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0 0 15px rgba(255, 20, 20, 0.3);
+}
+
+#juego {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .boton-iniciar:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+    background: #ff4040;
+    box-shadow: 0 0 35px rgba(255, 40, 40, 0.8);
+    transform: translateY(-4px);
+}
+
+h1, h2 {
+    text-shadow: 0 0 12px #ff4d4d;
+    animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: .92; }
+    100% { opacity: 0.85; }
 }
 
 input:checked + label {
@@ -210,21 +229,20 @@ video {
 }
 
 .card {
-  width: 40vw;
-  min-width: 600px;
+  width: min(600px, 80vw);
   height: 70vh;
-  background-color: #4e0b0b;
   color: #ffcccc;
-  margin: 100px;
+  margin: 0 auto;
   font-family: "Metal Mania", system-ui;
   font-size: x-large;
   display: flex;
   justify-content: center;
   align-items: center;
   perspective: 1000px;
-  background: transparent;     /* saca cualquier color de fondo */
-  border: none;                /* elimina el borde del contenedor */
-  box-shadow: none;            /* quita sombra general */
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 20px;
 }
 
 .card input {
