@@ -1,4 +1,4 @@
-const cartasclash = [
+const clashroyale = [
 'Arqueras',
 'Caballero',
 'Gigante',

@@ -76,20 +76,30 @@ function seleccionarcantimpostores(cantjugadores) {
         let inputClubes = document.getElementById("Clubes");
         let inputLugares = document.getElementById("Lugares");
         let inputProfesiones = document.getElementById("Profesiones");
+        let inputClashroyale = document.getElementById("Clashroyale");
 
 
     if (inputPaises.checked) 
         { categoriaelegida = "Paises"; palabrascategoria = paises.length; opcionesCategorias = paises;
+
     } else if (inputFutbolistashistoricos.checked) 
         { categoriaelegida = "Futbolistashistoricos"; palabrascategoria = futbolH.length; opcionesCategorias = futbolH;
+
     } else if (inputFutbolistasactuales.checked) 
         { categoriaelegida = "Futbolistasactuales"; palabrascategoria = futbolA.length; opcionesCategorias = futbolA;
+
     } else if (inputClubes.checked) 
         { categoriaelegida = "Clubes"; palabrascategoria = clubes.length; opcionesCategorias = clubes;
+
     } else if (inputLugares.checked) 
         { categoriaelegida = "Lugares"; palabrascategoria = lugares.length; opcionesCategorias = lugares;
+
     } else if (inputProfesiones.checked) 
         { categoriaelegida = "Profesiones"; palabrascategoria = profesiones.length; opcionesCategorias = profesiones;
+
+    } else if (inputClashroyale.checked) 
+        { categoriaelegida = "Clashroyale"; palabrascategoria = clashroyale.length; opcionesCategorias = clashroyale;
+            
     } else {
         alert("Selecciona una categoria");
         reiniciarJuego();
