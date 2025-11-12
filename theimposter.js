@@ -99,7 +99,7 @@ function seleccionarcantimpostores(cantjugadores) {
 
     } else if (inputClashroyale.checked) 
         { categoriaelegida = "Clashroyale"; palabrascategoria = clashroyale.length; opcionesCategorias = clashroyale;
-            
+
     } else {
         alert("Selecciona una categoria");
         reiniciarJuego();
@@ -169,7 +169,6 @@ function juego() {
 }
         rolesjugadores()
 }
-
 
 //funciones basicas
 
