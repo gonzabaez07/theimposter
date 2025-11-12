@@ -272,17 +272,27 @@ video {
   cursor: pointer;
 }
 
-#boton-final {
-  width: 400px;
+.boton-final {
+  width: 250px;
   height: 50px;
   border-radius: 20px;
   background-color: #4e0b0b;
   color: #ffcccc;
-  margin: 50px auto;
+  margin: 10px auto;
   border: 2px, solid;
   font-family: "Metal Mania", system-ui;
   font-size: large;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.boton-final:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.botonesfinales {
+  display: flex;
+  flex-direction: row;
 }

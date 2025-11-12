@@ -1,177 +1,185 @@
 let opcionesCategorias = [];
 let palabrascategoria = "";
-
 let cantjugadoresGlobal = 0;
 let categoriaelegida = "";
-let reiniciarJuego = () => {
-    location.reload()
-}
+let impostoresGlobal = [];
+let palabraGlobal = "";
+
+// Reiniciar todo
+let reiniciarJuego = () => location.reload();
+
 function iniciarJuego() {
-    console.log("juego iniciado");
-    let sectionpreparacionJuego = document.getElementById("preparacion-juego");
-    let sectionjuego = document.getElementById("juego");
-    sectionjuego.style.display = "none";
-    sectionpreparacionJuego.style.display = "none";
-    let sectionfinalJuego = document.getElementById("final-juego");
-    sectionfinalJuego.style.display = "none";
+    console.log("Juego iniciado");
 
-    let botonComenzar = document.getElementById("boton-comenzar");
-    botonComenzar.addEventListener("click", configurarjuego);
+    document.getElementById("preparacion-juego").style.display = "none";
+    document.getElementById("juego").style.display = "none";
+    document.getElementById("final-juego").style.display = "none";
 
-    let botonIniciar = document.getElementById("boton-iniciar");
-    botonIniciar.addEventListener("click", iniciarJuegoPosta);
+    document.getElementById("boton-comenzar").addEventListener("click", configurarjuego);
+    document.getElementById("boton-iniciar").addEventListener("click", iniciarJuegoPosta);
+
+    document.getElementById("descubrir-impostor").addEventListener("click", revelarImpostores);
+    document.getElementById("boton-inicio").addEventListener("click", reiniciarJuego);
+    document.getElementById("boton-volver").addEventListener("click", volverAJugar);
 }
 
 function configurarjuego() {
-    let sectioninicio = document.getElementById("inicio");
-    let sectionpreparacionJuego = document.getElementById("preparacion-juego");
-    sectionpreparacionJuego.style.display = "block";
-    sectioninicio.style.display = "none";
+    document.getElementById("inicio").style.display = "none";
+    document.getElementById("preparacion-juego").style.display = "block";
 }
 
-//configuracion del juego
-
+// Inicio del juego
 let iniciarJuegoPosta = () => {
     let cantjugadores = seleccionarcantjugadores();
     let cantidadimpostores = seleccionarcantimpostores(cantjugadores);
     let categoria = seleccionarcategoria();
-    
 
-    console.log("Cantidad de jugadores: " + cantjugadores);
-    console.log("Cantidad de impostores: " + cantidadimpostores);
-    console.log("Categoria seleccionada: " + categoria);
+    console.log("Jugadores:", cantjugadores);
+    console.log("Impostores:", cantidadimpostores);
+    console.log("Categoría:", categoria);
 
-    
+    document.getElementById("preparacion-juego").style.display = "none";
+    document.getElementById("juego").style.display = "block";
 
-    let sectionpreparacionJuego = document.getElementById("preparacion-juego");
-    sectionpreparacionJuego.style.display = "none";
-    let sectionjuego = document.getElementById("juego");
-    sectionjuego.style.display = "block";
-    juego(); 
-}
+    juego();
+};
 
 function seleccionarcantjugadores() {
-    let cantjugadores = parseInt(document.getElementById("input-jugadores").value); // ✅ Parsear valor
+    let cantjugadores = parseInt(document.getElementById("input-jugadores").value);
     if (cantjugadores < 3 || cantjugadores > 20 || isNaN(cantjugadores)) {
-        alert("El numero de jugadores debe ser entre 3 y 20");
+        alert("El número de jugadores debe ser entre 3 y 20");
         reiniciarJuego();
     }
-    cantjugadoresGlobal = cantjugadores; // ✅ Guardar global
+    cantjugadoresGlobal = cantjugadores;
     return cantjugadores;
 }
 
 function seleccionarcantimpostores(cantjugadores) {
-    let cantidadimpostores = parseInt(document.getElementById("input-impostores").value); // ✅ Parsear valor
+    let cantidadimpostores = parseInt(document.getElementById("input-impostores").value);
     if (cantidadimpostores < 1 || cantidadimpostores > cantjugadores - 2 || isNaN(cantidadimpostores)) {
-        alert("El numero de impostores debe ser al menos 1 y como maximo " + (cantjugadores - 2));
+        alert("El número de impostores debe ser al menos 1 y como máximo " + (cantjugadores - 2));
         reiniciarJuego();
     }
     return cantidadimpostores;
 }
 
-    let seleccionarcategoria = () => {
-        let inputPaises = document.getElementById("Paises");
-        let inputFutbolistashistoricos = document.getElementById("Futbolistashistoricos");
-        let inputFutbolistasactuales = document.getElementById("Futbolistasactuales");
-        let inputClubes = document.getElementById("Clubes");
-        let inputLugares = document.getElementById("Lugares");
-        let inputProfesiones = document.getElementById("Profesiones");
-        let inputClashroyale = document.getElementById("Clashroyale");
+let seleccionarcategoria = () => {
+    let inputs = {
+        Paises: paises,
+        Futbolistashistoricos: futbolH,
+        Futbolistasactuales: futbolA,
+        Clubes: clubes,
+        Lugares: lugares,
+        Profesiones: profesiones,
+        Clashroyale: clashroyale,
+    };
 
-
-    if (inputPaises.checked) 
-        { categoriaelegida = "Paises"; palabrascategoria = paises.length; opcionesCategorias = paises;
-
-    } else if (inputFutbolistashistoricos.checked) 
-        { categoriaelegida = "Futbolistashistoricos"; palabrascategoria = futbolH.length; opcionesCategorias = futbolH;
-
-    } else if (inputFutbolistasactuales.checked) 
-        { categoriaelegida = "Futbolistasactuales"; palabrascategoria = futbolA.length; opcionesCategorias = futbolA;
-
-    } else if (inputClubes.checked) 
-        { categoriaelegida = "Clubes"; palabrascategoria = clubes.length; opcionesCategorias = clubes;
-
-    } else if (inputLugares.checked) 
-        { categoriaelegida = "Lugares"; palabrascategoria = lugares.length; opcionesCategorias = lugares;
-
-    } else if (inputProfesiones.checked) 
-        { categoriaelegida = "Profesiones"; palabrascategoria = profesiones.length; opcionesCategorias = profesiones;
-
-    } else if (inputClashroyale.checked) 
-        { categoriaelegida = "Clashroyale"; palabrascategoria = clashroyale.length; opcionesCategorias = clashroyale;
-
-    } else {
-        alert("Selecciona una categoria");
-        reiniciarJuego();
+    for (let id in inputs) {
+        let input = document.getElementById(id);
+        if (input.checked) {
+            categoriaelegida = id;
+            opcionesCategorias = inputs[id];
+            palabrascategoria = opcionesCategorias.length;
+            return categoriaelegida;
+        }
     }
-    return categoriaelegida;
-}
 
-//juego
-    
+    alert("Selecciona una categoría");
+    reiniciarJuego();
+};
+
+// Lógica del juego
 function juego() {
-
     function seleccionarpalabra() {
         let palabra = aleatorio(1, palabrascategoria);
-        return opcionesCategorias[palabra - 1];
+        palabraGlobal = opcionesCategorias[palabra - 1];
+        return palabraGlobal;
     }
+
     function seleccionarimpostores() {
         let cantidadimpostores = parseInt(document.getElementById("input-impostores").value);
         let impostores = [];
-
-    while (impostores.length < cantidadimpostores) {
-        let candidato = aleatorio(1, cantjugadoresGlobal);
-        if (!impostores.includes(candidato)) {
-            impostores.push(candidato);
+        while (impostores.length < cantidadimpostores) {
+            let candidato = aleatorio(1, cantjugadoresGlobal);
+            if (!impostores.includes(candidato)) impostores.push(candidato);
         }
+        impostoresGlobal = impostores;
+        return impostores;
     }
 
-    return impostores;
-    }
-
-    // let botonAsignarRol = document.getElementById("asignar-rol");
-    // botonAsignarRol.addEventListener("click", rolesjugadores);
-    
+    // Mostrar roles
     function rolesjugadores() {
-        let mostrandorol = false
+        let mostrandorol = false;
         let palabra = seleccionarpalabra();
         let impostores = seleccionarimpostores();
         let jugadoractual = 1;
-        function cambiartarjeta () {
-            console.log('cambiar tarjeta')
-            mostrandorol = !mostrandorol
+
+        const card = document.getElementById("tarjetas-jugadores");
+        const front = document.getElementById("datos-jugadores-front");
+        const back = document.getElementById("datos-jugadores-back");
+        const cardInner = document.getElementById("card-inner");
+
+        card.replaceWith(card.cloneNode(true));
+        const nuevaCard = document.getElementById("tarjetas-jugadores");
+
+        function cambiartarjeta() {
+            mostrandorol = !mostrandorol;
             if (!mostrandorol) jugadoractual++;
+
             if (jugadoractual > cantjugadoresGlobal) {
-                let sectionfinalJuego = document.getElementById("final-juego");
-                sectionfinalJuego.style.display = "block";
-                let sectionjuego = document.getElementById("juego");
-                sectionjuego.style.display = "none";
+                document.getElementById("juego").style.display = "none";
+                document.getElementById("final-juego").style.display = "block";
+                return;
             }
-            let rolstring = ""
+
             if (mostrandorol) {
-                if (impostores.includes(jugadoractual)) {
-                    rolstring = "Eres el impostor"
-                } else {
-                    rolstring = "Tu palabra es: " + palabra
-               
-                }
-                document.getElementById("datos-jugadores-back").textContent = rolstring
-                document.getElementById("card-inner").className= 'card-inner rotated'
-            }
-            else {
-                document.getElementById("datos-jugadores-front").textContent = `Jugador ${jugadoractual}`
-                document.getElementById("card-inner").className = 'card-inner'
+                let rol = impostores.includes(jugadoractual)
+                    ? "Eres el impostor 😈"
+                    : "Tu palabra es: " + palabra;
+                document.getElementById("datos-jugadores-back").textContent = rol;
+                document.getElementById("card-inner").className = "card-inner rotated";
+            } else {
+                document.getElementById("datos-jugadores-front").textContent = `Jugador ${jugadoractual}`;
+                document.getElementById("card-inner").className = "card-inner";
             }
         }
-        document.getElementById("datos-jugadores-front").textContent = `Jugador ${jugadoractual}`
-        document.getElementById("tarjetas-jugadores").addEventListener("click", cambiartarjeta)
 
+        document.getElementById("datos-jugadores-front").textContent = `Jugador ${jugadoractual}`;
+        nuevaCard.addEventListener("click", cambiartarjeta);
+    }
+
+    rolesjugadores();
 }
-        rolesjugadores()
+
+// Mostrar impostores
+function revelarImpostores() {
+    if (impostoresGlobal.length === 0) {
+        alert("Todavía no se han asignado impostores.");
+    } else {
+        alert("Los impostores son los jugadores: " + impostoresGlobal.join(", "));
+    }
 }
 
-//funciones basicas
+// Volver a jugar
+function volverAJugar() {
+    impostoresGlobal = [];
+    palabraGlobal = "";
+    cantjugadoresGlobal = 0;
+    opcionesCategorias = [];
+    palabrascategoria = "";
+    categoriaelegida = "";
 
+    document.getElementById("final-juego").style.display = "none";
+    document.getElementById("inicio").style.display = "none";
+    document.getElementById("juego").style.display = "none";
+    document.getElementById("preparacion-juego").style.display = "block";
+
+    document.getElementById("datos-jugadores-front").textContent = "";
+    document.getElementById("datos-jugadores-back").textContent = "";
+    document.getElementById("card-inner").className = "card-inner";
+}
+
+// Aleatorio
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
