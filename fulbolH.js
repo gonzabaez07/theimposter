@@ -10,6 +10,7 @@
     'Paolo Maldini',
     'Andrea Pirlo',
     'Xavi Hernández',
+    'Xavi Alonso',
     'Andrés Iniesta',
     'Carlos Tévez',
     'Juan Roman Riquelme',
@@ -48,5 +49,10 @@
     'Michael Ballack',
     'Dani Alves',
     'Diego Forlán',
-    'Jose Luis Chilavert'
+    'Jose Luis Chilavert',
+    'Toni Kross',
+    'Luka Modric',
+    'Lionel Messi',
+    'Cristiano Ronaldo',
+    'Neymar'
 ];
