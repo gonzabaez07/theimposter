@@ -1,23 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
 
 html, body {
+  margin: 0;
   height: 100%;
   background: radial-gradient(circle at top, #3b0000 0, #120000 55%, #050000 100%);
   background-attachment: fixed;
-  margin: 0;
-  padding: 0;
+  font-family: "Metal Mania", system-ui;
+  color: #ffe4e1;
 }
+
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #3b0000 0, #120000 55%, #050000 100%);
-  font-family: "Metal Mania", system-ui;
-  color: #ffe4e1;
 }
 
 .hero {
@@ -233,16 +227,6 @@ video {
   height: 70vh;
   color: #ffcccc;
   margin: 0 auto;
-  font-family: "Metal Mania", system-ui;
-  font-size: x-large;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 1000px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  border-radius: 20px;
 }
 
 .card input {
