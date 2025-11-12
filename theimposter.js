@@ -134,13 +134,20 @@ function juego() {
 
             if (mostrandorol) {
                 let rol = impostores.includes(jugadoractual)
-                    ? "Eres el impostor 😈"
-                    : "Tu palabra es: " + palabra;
+                ? "Eres el impostor 😈"
+                : "Tu palabra es: " + palabra;
+
                 document.getElementById("datos-jugadores-back").textContent = rol;
                 document.getElementById("card-inner").className = "card-inner rotated";
+
+                document.body.classList.remove("flash-role");
+                void document.body.offsetWidth;
+                document.body.classList.add("flash-role");
+
             } else {
                 document.getElementById("datos-jugadores-front").textContent = `Jugador ${jugadoractual}`;
                 document.getElementById("card-inner").className = "card-inner";
+                document.body.classList.remove("flash-role");
             }
         }
 
