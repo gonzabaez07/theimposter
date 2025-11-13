@@ -188,7 +188,7 @@ input:checked + label {
   text-transform: uppercase;
   color: #ffcccc;
   text-shadow: 0 0 10px #ff4b4b;
-  margin: 0 0 8px 0;
+  margin: 40px 0px 8px 40px;
 }
 
 .card {
@@ -323,7 +323,6 @@ video {
   text-align: center;
   padding: 16px 40px;
   font-size: 52px;
-  margin: 0;
   border-radius: 18px;
   letter-spacing: 3px;
   text-shadow: 0 0 20px #ff4b4b;
