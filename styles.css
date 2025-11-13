@@ -188,7 +188,7 @@ input:checked + label {
   text-transform: uppercase;
   color: #ffcccc;
   text-shadow: 0 0 10px #ff4b4b;
-  margin: 0 0 8px 0;
+  margin: 40px 0px 8px 40px;
 }
 
 .card {
