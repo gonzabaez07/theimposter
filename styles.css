@@ -188,7 +188,6 @@ input:checked + label {
   text-transform: uppercase;
   color: #ffcccc;
   text-shadow: 0 0 10px #ff4b4b;
-  margin: 40px 0px 8px 40px;
 }
 
 .card {
@@ -326,7 +325,6 @@ video {
   border-radius: 18px;
   letter-spacing: 3px;
   text-shadow: 0 0 20px #ff4b4b;
-  animation: finalAlert 2s infinite ease-in-out;
 }
 
 @keyframes finalAlert {
