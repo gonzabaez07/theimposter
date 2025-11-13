@@ -320,8 +320,9 @@ video {
 .titulo-final {
   color: #ffcccc;
   text-align: center;
-  padding: 16px 40px;
+  padding: 30px;
   font-size: 52px;
+  margin: 10px;
   border-radius: 18px;
   letter-spacing: 3px;
   text-shadow: 0 0 20px #ff4b4b;
