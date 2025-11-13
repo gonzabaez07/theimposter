@@ -112,19 +112,20 @@ input[type="number"] {
 }
 
 .categorias {
-  width: 300px;
-  padding: 20px;
+  width: 260px;
+  padding: 15px;
   background: #250000;
   border: 2px solid #ff4040;
   border-radius: 20px;
   box-shadow: 0 0 25px rgba(255, 20, 20, 0.25);
   transition: transform .25s, box-shadow .25s, border-color .25s;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .categorias:hover {
   transform: translateY(-10px) scale(1.03);
-  border-color: #ff6b6b;
+  border-color: #ffffff;
   box-shadow: 0 0 35px rgba(255, 60, 60, 0.6);
 }
 
@@ -132,6 +133,8 @@ input[type="number"] {
   width: 100%;
   border-radius: 15px;
   transition: opacity .25s;
+  height: 200px;
+  object-fit: cover;
 }
 
 .categorias:hover img {
@@ -170,7 +173,7 @@ h1, h2 {
 }
 
 input:checked + label {
-  background-color: #2e0606;
+  background-color: #610000;
   color: #ffcccc;
 }
 
@@ -317,7 +320,6 @@ video {
 
 .titulo-final {
   color: #ffcccc;
-  background: #2e0606;
   text-align: center;
   padding: 16px 40px;
   font-size: 52px;
