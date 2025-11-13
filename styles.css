@@ -121,6 +121,7 @@ input[type="number"] {
   transition: transform .25s, box-shadow .25s, border-color .25s;
   cursor: pointer;
   margin-bottom: 20px;
+  padding-bottom: 0;
 }
 
 .categorias:hover {
@@ -189,6 +190,7 @@ input:checked + label {
   color: #ffcccc;
   text-shadow: 0 0 10px #ff4b4b;
   padding: 35px;
+  text-align: center;
 }
 
 .card {
@@ -428,4 +430,62 @@ body.flash-role {
     justify-content: center;
     gap: 40px;
     width: 100%;
+}
+
+@media (max-width: 500px) {
+    .titulo {
+    font-size: 2.5rem;
+  }
+
+    .logo-fijo {
+      padding: 25px 0px;
+      max-width: 215px;
+  }
+
+  .categorias {
+    width: 45%;
+    margin-bottom: 0px;
+  }
+
+  .categorias img {
+    height: 110px;
+  }
+
+  .boton-iniciar {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+
+  .hud-juego {
+    font-size: 16px;
+  }
+
+  .card {
+    top: 42%;
+  }
+
+  .card-front, .card-back {
+    height: 150%;
+  }
+
+  .titulo-final {
+    font-size: 34px;
+  }
+
+  .descubrir-impostor {
+    width: 320px;
+    height: 65px;
+    font-size: 24px;
+  }
+
+  .botonesfinales {
+    gap: 20px;
+    width: 85%;
+  }
+
+  .boton-final {
+    width: 140px;
+    height: 48px;
+    font-size: 18px;
+  }
 }

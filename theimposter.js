@@ -198,6 +198,7 @@ function volverAJugar() {
     document.getElementById("datos-jugadores-front").textContent = "";
     document.getElementById("datos-jugadores-back").textContent = "";
     document.getElementById("card-inner").className = "card-inner";
+    document.querySelector(".titulo-final").textContent = "Descubran al Impostor"
 }
 
 // Aleatorio
