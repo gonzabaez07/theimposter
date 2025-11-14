@@ -488,4 +488,22 @@ body.flash-role {
     height: 48px;
     font-size: 18px;
   }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #050000;
+}
+
+body {
+    height: -webkit-fill-available;
+    background-attachment: fixed;
+    overscroll-behavior: none;
+}
+
+html {
+    height: -webkit-fill-available;
+}
 }
