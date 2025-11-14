@@ -134,7 +134,7 @@ function juego() {
 
             if (mostrandorol) {
                 let rol = impostores.includes(jugadoractual)
-                ? "Eres el impostor 😈"
+                ? "Eres el impostor"
                 : "Tu palabra es: " + palabra;
 
                 document.getElementById("datos-jugadores-back").textContent = rol;
